@@ -1,0 +1,726 @@
+body {
+    background: rgb(255, 255, 255);
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header h1 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 3rem;
+    color: white;
+    text-align: center;
+    margin-top: 20rem;
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+header {
+    background-color: black;
+    background-image: url("Assets/back.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 60rem;
+}
+
+ul {
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+    margin-right: 2rem;
+    font-weight: 300;
+    margin-top: 2rem;
+}
+
+ul a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+ul a:hover{
+    color: goldenrod;
+}
+
+ul a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px; 
+    background-color: goldenrod; 
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease; 
+}
+
+ul a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+ul li.current a::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.myButton, .call {
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    border: none;
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin: 0 auto;
+    display: block;
+    border-radius: 2rem;
+    color: rgb(0, 0, 0);
+    transition: background-color 0.5s ease, transform 0.3s ease;
+}
+.myButton:hover{
+    background-color: goldenrod;
+    color: white;
+
+}
+.call:hover{
+    background-color: goldenrod;
+    color: white;
+
+}
+
+.call {
+    margin-top: 1%;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+}
+
+.about-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.about h1{
+    color: grey;
+    font-weight: 700;
+    font-size: 30px;
+    padding: 3%;
+}
+.about p{
+    padding: 3%;
+    color: grey;
+    font-size: 20px;
+}
+.about img{
+    width: 50%;
+    object-fit: cover;
+}
+
+.gallery {
+    background-color: grey;
+    background-image: url("Assets/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 1px;
+}
+
+.gallery h1 {
+    color: white;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.photo-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    overflow: hidden;
+}
+.photo-container .wrapper{
+    overflow: hidden;
+}
+.wrapper{
+    position: relative;
+}
+.wrapper img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: all 0.3s ;
+}
+
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    opacity: 0; 
+    transition: all 0.3s ease;
+}
+
+.wrapper:hover .text-overlay {
+    opacity: 1; 
+    transform: scale(1.2);
+}
+
+.process-header {
+    text-align: center;
+    padding-top: 3%;
+}
+
+.process-header h1{
+    color: goldenrod;
+}
+
+.process-header h2{
+    font-size: 40px;
+}
+
+.circle {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%; 
+    background-color: white;
+    border: 1px solid;
+    transition: ease 0.3s;
+}
+
+.circle:hover{
+    background-color: goldenrod;
+    border: none;
+    transform: scale(1.2);
+}
+
+.process{
+    height: 400px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 3%;
+}
+
+.item-1{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    text-align: center;
+}
+.item-1 p{
+    margin-left: 2%;
+    margin-right: 2%;
+    line-height: 26px;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-evenly;
+    height: 400px;
+    background-color: rgb(32, 32, 32);
+    padding-top: 4%;
+}
+
+.business h1{
+    color: goldenrod;
+}
+
+.business p{
+    color: white;
+    line-height: 30px;
+}
+
+.contact h1{
+    color: goldenrod;
+}
+
+.contact p{
+    color: white;
+    line-height: 30px;
+}
+
+.explore h1{
+    color: goldenrod;
+}
+
+.explore p{
+    color: white;
+    line-height: 30px;
+}
+
+.estimate h1{
+    color: goldenrod;
+}
+.estimate p{
+    color: white;
+    line-height: 30px;
+}
+#emailInput{
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(51, 51, 51);
+    border: none;
+    height: 40px;
+    width: 280px;
+    color: white;
+    border: 1px solid transparent;
+}
+
+#emailInput:hover{ 
+    border-color: goldenrod;
+}
+@media screen and (min-width: 901px) and (max-width: 1200px){
+    header {
+    background-color: black;
+    background-image: url("Assets/back.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 40rem;
+}
+.header h1 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-top: 150px;
+}
+.myButton, .call {
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    border: none;
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    display: block;
+    border-radius: 2rem;
+    color: rgb(0, 0, 0);
+    transition: background-color 0.5s ease, transform 0.3s ease;
+}
+.myButton:hover{
+    background-color: goldenrod;
+    color: white;
+
+}
+.call:hover{
+    background-color: goldenrod;
+    color: white;
+
+}
+
+.call {
+    margin-top: 1%;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.about h1{
+    color: grey;
+    font-weight: 700;
+    font-size:23px;
+    padding: 3%;
+}
+.about p{
+    padding: 3%;
+    color: grey;
+    font-size: 23px;
+}
+.about img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery {
+    background-color: grey;
+    background-image: url("Assets/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 1px;
+}
+
+.gallery h1 {
+    color: white;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.photo-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.process-header {
+    text-align: center;
+    padding-top: 2%;
+}
+
+.process-header h1{
+    color: goldenrod;
+    font-size: 20px;
+}
+
+.process-header h2{
+    font-size: 30px;
+}
+
+.process{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    height: 800px;
+    padding: 20px;
+}
+
+.item-1{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    text-align: center;
+    margin: 0;
+}
+.item-1 h1{
+    font-size: 20px;
+}
+.item-1 p{
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 22px;
+    line-height: 25px;
+}
+
+.circle {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    background-color: white;
+    border: 1px solid;
+    transition: ease 0.3s;
+}
+
+.circle:hover{
+    background-color: goldenrod;
+    border: none;
+    transform: scale(1.2);
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    place-items: center;
+    text-align: center;
+    height: 600px;
+    background-color: rgb(32, 32, 32);
+    padding-top: 1%;
+}
+
+.business h1{
+    color: goldenrod;
+    font-size: 20px;
+}
+
+.business p{
+    color: white;
+    line-height: 25px;
+    font-size: 20px;
+}
+
+.contact h1{
+    color: goldenrod;
+    font-size: 20px;
+}
+
+.contact p{
+    color: white;
+    line-height: 25px;
+    font-size: 20px;
+}
+
+.explore h1{
+    color: goldenrod;
+    font-size: 20px;
+}
+
+.explore p{
+    color: white;
+    line-height: 25px;
+    font-size: 20px;
+}
+
+.estimate h1{
+    color: goldenrod;
+    font-size: 20px;
+}
+.estimate p{
+    color: white;
+    line-height: 25px;
+    font-size: 20px;
+}
+#emailInput{
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(51, 51, 51);
+    border: none;
+    height: 30px;
+    width: 210px;
+    color: white;
+    font-size: 20px;
+}
+}
+@media screen and (max-width: 900px){
+    header {
+    background-color: black;
+    background-image: url("Assets/back.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 40rem;
+}
+.header h1 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-top: 150px;
+}
+.myButton, .call {
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    border: none;
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    display: block;
+    border-radius: 2rem;
+    color: rgb(0, 0, 0);
+    transition: background-color 0.5s ease, transform 0.3s ease;
+}
+.myButton:hover{
+    background-color: goldenrod;
+    color: white;
+
+}
+.call:hover{
+    background-color: goldenrod;
+    color: white;
+
+}
+
+.call {
+    margin-top: 1%;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.about h1{
+    color: grey;
+    font-weight: 700;
+    font-size:23px;
+    padding: 3%;
+}
+.about p{
+    padding: 3%;
+    color: grey;
+    font-size: 23px;
+}
+.about img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery {
+    background-color: grey;
+    background-image: url("Assets/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 1px;
+}
+
+.gallery h1 {
+    color: white;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.photo-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.process-header {
+    text-align: center;
+    padding-top: 2%;
+}
+
+.process-header h1{
+    color: goldenrod;
+    font-size: 20px;
+}
+
+.process-header h2{
+    font-size: 30px;
+}
+
+.process{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 1200px;
+    padding: 0;
+}
+
+.item-1{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    text-align: center;
+    margin: 0;
+}
+.item-1 h1{
+    font-size: 20px;
+}
+.item-1 p{
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.circle {
+    width: 75px; 
+    height: 75px; 
+    border-radius: 50%; 
+    background-color: white;
+    border: 1px solid;
+    transition: ease 0.3s;
+}
+
+.circle:hover{
+    background-color: goldenrod;
+    border: none;
+    transform: scale(1.2);
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 800px;
+    background-color: rgb(32, 32, 32);
+    padding-top: 4%;
+}
+
+.business h1{
+    color: goldenrod;
+    font-size: 20px;
+}
+
+.business p{
+    color: white;
+    line-height: 25px;
+    font-size: 20px;
+}
+
+.contact h1{
+    color: goldenrod;
+    font-size: 20px;
+}
+
+.contact p{
+    color: white;
+    line-height: 25px;
+    font-size: 20px;
+}
+
+.explore h1{
+    color: goldenrod;
+    font-size: 20px;
+}
+
+.explore p{
+    color: white;
+    line-height: 25px;
+    font-size: 20px;
+}
+
+.estimate h1{
+    color: goldenrod;
+    font-size: 20px;
+}
+.estimate p{
+    color: white;
+    line-height: 25px;
+    font-size: 20px;
+}
+#emailInput{
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(51, 51, 51);
+    border: none;
+    height: 30px;
+    width: 210px;
+    color: white;
+    font-size: 20px;
+}
+}
